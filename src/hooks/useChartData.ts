@@ -9,7 +9,7 @@ const useChartData = (ticker: string = '') => {
         method: 'GET',
         url: 'https://finnhub.io/api/v1/stock/candle',
         params: {
-            token: process.env.VITE_FINNHUB_API_KEY,
+            token: import.meta.env.VITE_FINNHUB_API_KEY,
             symbol: ticker,
             resolution: 'D',
             from: Math.floor(new Date().getTime() / 1000) - 2592000,

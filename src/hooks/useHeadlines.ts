@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-const apiKey = process.env.VITE_FINNHUB_API_KEY;
+const apiKey = import.meta.env.VITE_FINNHUB_API_KEY;
 
 const options = {
     method: "GET",

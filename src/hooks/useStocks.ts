@@ -14,7 +14,7 @@ const useStocks = (ticker: string = "AMZN") => {
         const options = {
             method: 'GET',
             url: 'https://finnhub.io/api/v1/search',
-            params: { token: process.env.VITE_FINNHUB_API_KEY, q: ticker },
+            params: { token: import.meta.env.VITE_FINNHUB_API_KEY, q: ticker },
         }
         const response = await axios.request(options);
 
